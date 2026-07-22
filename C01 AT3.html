@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Standards Implementation</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#0077ff,#00c6ff);
+color:white;
+padding:20px 40px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h2{
+font-size:28px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:yellow;
+}
+
+.hero{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:60px;
+background:white;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:45px;
+color:#0077ff;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero-text button{
+padding:15px 30px;
+background:#0077ff;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+transition:.3s;
+}
+
+.hero-text button:hover{
+background:#005fd6;
+}
+
+.hero img{
+width:420px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+section{
+padding:50px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h2{
+color:#0077ff;
+margin-bottom:15px;
+}
+
+video{
+width:100%;
+border-radius:10px;
+}
+
+form{
+display:grid;
+gap:15px;
+margin-top:20px;
+}
+
+input{
+padding:12px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button.submit{
+background:#28a745;
+color:white;
+padding:15px;
+border:none;
+border-radius:6px;
+font-size:18px;
+cursor:pointer;
+}
+
+button.submit:hover{
+background:#218838;
+}
+
+pre{
+background:#222;
+color:#00ff88;
+padding:20px;
+overflow:auto;
+border-radius:8px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th,table td{
+border:1px solid #ddd;
+padding:15px;
+text-align:center;
+}
+
+table th{
+background:#0077ff;
+color:white;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+margin-top:30px;
+width:90%;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<h2>Startup Web App</h2>
+
+<ul>
+<li><a href="#video">Video</a></li>
+<li><a href="#register">Register</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#protocol">HTTP</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<div class="hero">
+
+<div class="hero-text">
+
+<h1>Modern Web Development</h1>
+
+<p>
+This website demonstrates HTML5, CSS3, HTTP communication,
+semantic HTML, XML syntax, and a secure registration form.
+</p>
+
+<button onclick="document.getElementById('register').scrollIntoView();">
+Register Now
+</button>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="Web Development">
+
+</div>
+
+<section id="video">
+
+<div class="card">
+
+<h2>1. HTML5 Video Embedding</h2>
+
+<p>
+The HTML5 &lt;video&gt; tag is the standard way to embed videos into webpages.
+</p>
+
+<video controls>
+
+<source src="sample.mp4" type="video/mp4">
+
+Your browser does not support HTML5 Video.
+
+</video>
+
+</div>
+
+</section>
+
+<section id="register">
+
+<div class="card">
+
+<h2>2. Secure Registration Form (POST)</h2>
+
+<p>
+The form below uses the POST method to securely send user data.
+</p>
+
+<form action="register.php" method="POST">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="password" placeholder="Password" required>
+
+<input type="tel" placeholder="Phone Number">
+
+<button class="submit">Register</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>3. Semantic Navigation</h2>
+
+<p>
+
+The navigation bar at the top is created using the semantic
+&lt;nav&gt; element. Semantic HTML improves SEO,
+accessibility, and webpage structure.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="xml">
+
+<div class="card">
+
+<h2>4. Correct XML Syntax</h2>
+
+<pre>
+&lt;note&gt;
+    &lt;to&gt;User&lt;/to&gt;
+    &lt;from&gt;Admin&lt;/from&gt;
+&lt;/note&gt;
+</pre>
+
+<p>
+
+Every opening tag has a matching closing tag,
+making the XML document well formed.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="protocol">
+
+<div class="card">
+
+<h2>5. HTTP Communication Protocol</h2>
+
+<p>
+
+HTTP (HyperText Transfer Protocol) enables communication
+between a web browser and a web server using the
+request-response model.
+
+</p>
+
+<table>
+
+<tr>
+<th>Protocol</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>HTTP</td>
+<td>Web Communication</td>
+</tr>
+
+<tr>
+<td>FTP</td>
+<td>File Transfer</td>
+</tr>
+
+<tr>
+<td>SMTP</td>
+<td>Email Sending</td>
+</tr>
+
+<tr>
+<td>SNMP</td>
+<td>Network Management</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>CSA43 - Internet Programming</h3>
+
+<p>
+Assessment Tool 3 | Web Development Standards Implementation
+</p>
+
+<p>
+
+</p>
+
+</footer>
+
+</body>
+</html>
