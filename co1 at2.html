@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIMATS Assessment Tool 2</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef2f7;margin:20px}
+h1,h2{text-align:center;color:#003366}
+.box{background:#fff;padding:20px;margin:20px auto;max-width:900px;border-left:6px solid #0056b3;border-radius:8px;box-shadow:0 0 8px #ccc}
+pre{background:#222;color:#0f0;padding:10px;border-radius:5px;overflow:auto}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+table,th,td{border:1px solid #666}
+th{background:#003366;color:#fff}
+th,td{padding:8px}
+ol{padding-left:20px}
+</style>
+</head>
+
+<body>
+
+<h1>SIMATS ENGINEERING</h1>
+<h2>Assessment Tool 2 - Internet Programming (CSA43)</h2>
+
+<div class="box">
+<h3>1. HTTP Response Analysis</h3>
+<pre>HTTP/1.1 200 OK
+Date: Mon, 01 Apr 2026 10:00:00 GMT
+Content-Type: text/html
+Content-Length: -150
+Connection: keep-alive</pre>
+<ol>
+<li>Identify any incorrect or invalid fields.</li>
+<li>Analyze the issue with Content-Length.</li>
+<li>Determine whether the status code is correct.</li>
+<li>Suggest corrections.</li>
+</ol>
+</div>
+
+<div class="box">
+<h3>2. DOM Structure Analysis</h3>
+<pre>&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Test Page&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;
+   &lt;p&gt;Hello World
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+<ol>
+<li>Identify missing closing elements.</li>
+<li>Analyze browser interpretation.</li>
+<li>Determine rendering impact.</li>
+<li>Suggest a valid DOM structure.</li>
+</ol>
+</div>
+
+<div class="box">
+<h3>3. GET vs POST in Login System</h3>
+
+<table>
+<tr>
+<th>Method</th>
+<th>URL Example</th>
+<th>Visibility</th>
+<th>Security</th>
+</tr>
+<tr>
+<td>GET</td>
+<td>/login?user=admin&pass=1234</td>
+<td>Visible</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/login</td>
+<td>Hidden in Body</td>
+<td>Moderate</td>
+</tr>
+</table>
+
+<ol>
+<li>Compare GET and POST.</li>
+<li>Which method is suitable for login?</li>
+<li>Security risks of GET.</li>
+<li>Best practices for secure login.</li>
+</ol>
+</div>
+
+<div class="box">
+<h3>4. HTML Code Inspection</h3>
+
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sample&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome
+&lt;p&gt;This is a paragraph
+&lt;img src="image.jpg"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<ol>
+<li>Identify missing closing tags.</li>
+<li>Analyze issues with the image tag.</li>
+<li>Browser handling of errors.</li>
+<li>Suggest corrected HTML.</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h3>5. Browser–Server Communication Flow</h3>
+
+<pre>
+User → DNS Lookup → HTTP Request
+        ↓
+Server Processing
+        ↓
+HTTP Response
+        ↓
+Browser Rendering
+</pre>
+
+<ol>
+<li>Interpret each step.</li>
+<li>Where can delays occur?</li>
+<li>Role of DNS.</li>
+<li>Performance optimizations.</li>
+</ol>
+
+</div>
+
+</body>
+</html>
